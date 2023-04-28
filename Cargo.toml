@@ -4,6 +4,6 @@ default-members = ["app"]
 
 [workspace.dependencies.libcosmic]
 git = "https://github.com/pop-os/libcosmic"
-rev = "8232e1d249a467673dbc5b0aa2f2e1665fb18dde"
+rev = "ece17c8d62a06809f61233fef81ad7bd5404399d"
 default-features = false
 features = ["debug", "winit", "dyrend", "tokio"]
