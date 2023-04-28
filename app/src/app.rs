@@ -21,7 +21,7 @@ use cosmic::{
 
 use crate::{
     config::{self, Config},
-    pages::{desktop, sound, system, time},
+    pages::{desktop, sound, system, time, input},
     widget::{page_title, parent_page_button, search_header, sub_page_button},
 };
 
@@ -118,6 +118,8 @@ impl Application for SettingsApp {
 
         // app.insert_page::<accessibility::Page>();
         // app.insert_page::<applications::Page>();
+        //
+        app.insert_page::<input::Page>();
 
         let active_id = app
             .pages
@@ -208,6 +210,11 @@ impl Application for SettingsApp {
                 }
                 crate::pages::Message::Desktop(message) => {
                     if let Some(page) = self.pages.page_mut::<desktop::Page>() {
+                        page.update(message);
+                    }
+                }
+                crate::pages::Message::Input(message) => {
+                    if let Some(page) = self.pages.page_mut::<input::Page>() {
                         page.update(message);
                     }
                 }

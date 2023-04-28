@@ -157,3 +157,21 @@ firmware = Firmware
 
 users = Users
     .desc = Authentication and login, lock screen.
+
+## Input
+
+input = Input
+    .desc = Input
+
+## Input: Keyboard
+
+keyboard = Keyboard
+    .desc = Keyboard input
+
+keyboard-sources = Input Sources
+    .desc = Input sources can be switched using Super+Space key combination. This can be customized in the keyboard shortcut settings.
+
+## Input: Keyboard: Shortcuts
+
+keyboard-shortcuts = Keyboard Shortcuts
+    .desc = View and customize shortcuts
